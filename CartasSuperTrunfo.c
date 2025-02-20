@@ -3,7 +3,7 @@
 
 
 int main() {                            //informações salvas da Carta 2
-   
+   printf("Novo commit\n");
    
     char estado = 'B';                 // Letra de ''A'' a ''H''.
     char codigo[5] = "B02";               // Código: ''Estado'' + 01,02 etc. EX: A01
