@@ -2,7 +2,7 @@
 
 
 
-int main() {                            //informações salvas da Carta 1
+int main() {                            //informações salvas da Carta 2
    
    
     char estado = 'B';                 // Letra de ''A'' a ''H''.
