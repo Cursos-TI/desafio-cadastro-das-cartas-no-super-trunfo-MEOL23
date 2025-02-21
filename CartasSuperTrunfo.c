@@ -2,24 +2,35 @@
 
 
 
-int main() {                            //informações salvas da Carta 2
+int main() {                            //informações salvas da Carta 1 e 2
    printf("Novo commit\n");
-   
-    char estado = 'B';                 // Letra de ''A'' a ''H''.
-    char codigo[5] = "B02";               // Código: ''Estado'' + 01,02 etc. EX: A01
-    char nome[20] = "Belém";        // Nome da cidade
-    float area = 1.059;                // Área em km²
-    float pib = 34.4;                // PIB da cidade
-    int pontosturisticos= 17;          // Quantidade de pontos turísticos
-    int populacao = 1300000;           // População da cidade
+    //carta 1
+    char estado2 = 'B';                   // Aqui eu insiro as variáveis das duas cartas, dou um espaçamento para ficar menos bagunçado e mais legível.
+    char estado = 'A';                    // Estado sendo representado por uma letra de A a H.
+                                          
+    char codigo2[5] = "B02";               // Código vai ser a letra escolhida para o estado + um número de 01 a 04. ex: A01, B02 ..
+    char codigo[5] = "A01";
+    
+    char nome2[20]  = "Belém";            // Nome das cidades.
+    char nome[20] = "Salvador"; 
+    
+    float area2 = 1.059;                  //Área em km² usando float .              
+    float area = 693.8; 
 
+    float pib = 62.954;                   // PIB (produto interno bruto) usando float.
+    float pib2= 34.4;
+                                       
+    int pontosturisticos= 15;             // Quantidades de pontos turísticos das cidades.
+    int pontosturisticos2= 17;
+    
+    int populacao = 2400000;            //População das cidades (os dados sempre mudam, é apenas uma estimativa da quantidade de pessoas).
+    int populacao2= 1300000;   
 
-
-    printf("Cartas Super Trunfo\n");          
-    printf("Carta 2\n");
+    printf("Cartas Super Trunfo\n");                       //Print F com todas as informações das cartas
+    printf("Carta 1\n");                             
     printf("Estado: %c\n", estado);
     
-    printf("Nome da Cidade: %s\n", nome);
+    printf("Nome da Cidade: %s\n", nome);                  // Variáveis com seus demais especificadores !
    
     printf("Código: %s\n", codigo);
      
@@ -32,8 +43,25 @@ int main() {                            //informações salvas da Carta 2
     printf ("Pontos Turísticos: %d\n", pontosturisticos);
      
     
-    
-    
+    // Fim da carta 1                                   // Carta 1 Cadastrada !
 
+    // Carta 2
+    
+    printf("Carta 2\n");
+    printf("Estado: %c\n", estado2);
+    
+    printf("Nome da Cidade: %s\n", nome2);
+   
+    printf("Código: %s\n", codigo2);
+     
+    printf("Área em KM²: %.2fKM²\n", area2);
 
-}
+    printf("PIB: %.3f bilhões\n", pib2);
+
+    printf("População: %d\n", populacao2);
+
+    printf ("Pontos Turísticos: %d\n", pontosturisticos2);
+
+    // fim da carta 2
+
+}  
