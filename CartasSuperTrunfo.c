@@ -14,7 +14,7 @@ int main() {
     char nome2[20] = "Belém"; 
     
     float area = 693.8;                       //área em km²
-    float area2 = 1.059;                
+    float area2 = 1059.0;                
 
     float pib = 62954000.00;                   //PIB
     float pib2= 30835763.45;
@@ -40,7 +40,7 @@ int main() {
    
     printf("Código: %s\n", codigo);
      
-    printf("Área em KM²: %.1fKm²\n", area);
+    printf("Área em KM²: %.2fKm²\n", area);
 
     printf("PIB: %.2f\n", pib);
 
@@ -64,7 +64,7 @@ int main() {
    
     printf("Código: %s\n", codigo2);
      
-    printf("Área em KM²: %.3fKM²\n", area2);
+    printf("Área em KM²: %.2fKM²\n", area2);
 
     printf("PIB: %.2f\n", pib2);
 
