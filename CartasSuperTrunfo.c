@@ -1,67 +1,82 @@
 #include <stdio.h>
 
 
-
-int main() {                            //informações salvas da Carta 1 e 2
+int main() {                          
    printf("Novo commit\n");
-    //carta 1
-    char estado2 = 'B';                   // Aqui eu insiro as variáveis das duas cartas, dou um espaçamento para ficar menos bagunçado e mais legível.
-    char estado = 'A';                    // Estado sendo representado por uma letra de A a H.
-                                          
-    char codigo2[5] = "B02";               // Código vai ser a letra escolhida para o estado + um número de 01 a 04. ex: A01, B02 ..
-    char codigo[5] = "A01";
-    
-    char nome2[20]  = "Belém";            // Nome das cidades.
-    char nome[20] = "Salvador"; 
-    
-    float area2 = 1.059;                  //Área em km² usando float .              
-    float area = 693.8; 
 
-    float pib = 62.954;                   // PIB (produto interno bruto) usando float.
-    float pib2= 34.4;
+    char estado = 'A';                                  //Declarando variáveis
+    char estado2 = 'B';                    // Para o Estado, deve-se escolher uma letra entre A e H
+                                          
+    char codigo[5] = "A01";                //letra do estado + número, ex: A01
+    char codigo2[5] = "B02";
+    
+    char nome[20]  = "Salvador";           //nome da cidade
+    char nome2[20] = "Belém"; 
+    
+    float area = 693.8;                       //área em km²
+    float area2 = 1.059;                
+
+    float pib = 62954000.00;                   //PIB
+    float pib2= 30835763.45;
                                        
-    int pontosturisticos= 15;             // Quantidades de pontos turísticos das cidades.
+    int pontosturisticos= 15;            // quantidade de pontos turisticos
     int pontosturisticos2= 17;
     
-    int populacao = 2400000;            //População das cidades (os dados sempre mudam, é apenas uma estimativa da quantidade de pessoas).
+    int populacao = 2400000;         //população da cidade
     int populacao2= 1300000;   
+ 
+    //calculo de densidade populacional e pib per capta
+    float densidade =  (float)populacao / area;
+    float densidade2 = (float)populacao2/ area2;
 
-    printf("Cartas Super Trunfo\n");                       //Print F com todas as informações das cartas
-    printf("Carta 1\n");                             
+    float pibpercapta = pib / populacao;
+    float pibpercapta2 =  pib2 / populacao2;
+ // impressão dos dados
+    printf("***Cartas Super Trunfo***\n");                   //carta1
+    printf("! Carta1 !\n");                             
     printf("Estado: %c\n", estado);
     
-    printf("Nome da Cidade: %s\n", nome);                  // Variáveis com seus demais especificadores !
+    printf("Nome da Cidade: %s\n", nome);               
    
     printf("Código: %s\n", codigo);
      
-    printf("Área em KM²: %.2fKM²\n", area);
+    printf("Área em KM²: %.1fKm²\n", area);
 
-    printf("PIB: %.3f bilhões\n", pib);
+    printf("PIB: %.2f\n", pib);
 
     printf("População: %d\n", populacao);
 
-    printf ("Pontos Turísticos: %d\n", pontosturisticos);
-     
-    
-    // Fim da carta 1                                   // Carta 1 Cadastrada !
+    printf("Pontos Turísticos: %d\n", pontosturisticos);
+   
+    printf("Densidade populacional: %.2f\n", densidade);
 
-    // Carta 2
+    printf("PIB per Capta: %.3f\n", pibpercapta);
+   
+    printf("               \n");
     
-    printf("Carta 2\n");
+                                      
+    
+    
+    printf("! Carta2 !\n");                                     //carta2
     printf("Estado: %c\n", estado2);
     
     printf("Nome da Cidade: %s\n", nome2);
    
     printf("Código: %s\n", codigo2);
      
-    printf("Área em KM²: %.2fKM²\n", area2);
+    printf("Área em KM²: %.3fKM²\n", area2);
 
-    printf("PIB: %.3f bilhões\n", pib2);
+    printf("PIB: %.2f\n", pib2);
 
     printf("População: %d\n", populacao2);
 
     printf ("Pontos Turísticos: %d\n", pontosturisticos2);
 
-    // fim da carta 2
+    printf("Densidade populacional: %.2f\n", densidade2);
 
-}  
+    printf("PIB per Capta: %.3f\n", pibpercapta2);               //não tenho certeza se o cálculo está correto
+   
+    printf("               \n");
+    
+
+}
