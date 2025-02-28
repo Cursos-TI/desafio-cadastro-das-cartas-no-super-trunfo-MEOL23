@@ -22,8 +22,8 @@ int main() {
     int pontosturisticos= 15;            // quantidade de pontos turisticos
     int pontosturisticos2= 17;
     
-    int populacao = 2400000;         //população da cidade
-    int populacao2= 1300000;   
+    unsigned long int populacao = 2400000;         //população da cidade
+    unsigned long int populacao2= 1300000;         // Mudança de int para unsigned long int
  
     //calculo de densidade populacional e pib per capta
     float densidade =  (float)populacao / area;
@@ -31,7 +31,14 @@ int main() {
 
     float pibpercapta = pib / populacao;
     float pibpercapta2 =  pib2 / populacao2;
+
+    float SuperPoder = populacao + area + pib + pontosturisticos + pibpercapta + densidade;                                      // soma dos outros atributos gera um super poder
+    float SuperPoder2 = populacao2 + area2 + pib2 + pontosturisticos2 + pibpercapta2 + densidade2;
+
+
+
  // impressão dos dados
+
     printf("***Cartas Super Trunfo***\n");                   //carta1
     printf("! Carta1 !\n");                             
     printf("Estado: %c\n", estado);
@@ -44,15 +51,18 @@ int main() {
 
     printf("PIB: %.2f\n", pib);
 
-    printf("População: %d\n", populacao);
+    printf("População: %lu\n", populacao);
 
     printf("Pontos Turísticos: %d\n", pontosturisticos);
    
     printf("Densidade populacional: %.2f\n", densidade);
 
     printf("PIB per Capta: %.3f\n", pibpercapta);
+
+    printf("Super Poder: %f\n", SuperPoder);
    
     printf("               \n");
+   
     
                                       
     
@@ -68,15 +78,30 @@ int main() {
 
     printf("PIB: %.2f\n", pib2);
 
-    printf("População: %d\n", populacao2);
+    printf("População: %lu\n", populacao2);
 
     printf ("Pontos Turísticos: %d\n", pontosturisticos2);
 
     printf("Densidade populacional: %.2f\n", densidade2);
 
-    printf("PIB per Capta: %.3f\n", pibpercapta2);               //não tenho certeza se o cálculo está correto
+    printf("PIB per Capta: %.3f\n", pibpercapta2); 
+    
+    printf("Super Poder: %f\n", SuperPoder2);
    
     printf("               \n");
-    
+
+    printf("*** Comparação de Cartas ***\n"); 
+    printf("! Se o resultado for 1, a carta1 vence, se for 0 a carta2 vence !\n");                // Se o resultado for 1 a carta1 vence, se for 0 a carta2 vence
+    printf("População: %d\n", populacao > populacao2);
+    printf("Área KM²: %d\n", area > area2);
+    printf("PIB: %d\n", pib > pib2);
+    printf("Pontos turísticos: %d\n", pontosturisticos > pontosturisticos2);
+    printf("Densidade Populacional: %d\n", densidade < densidade2);
+    printf("PIB Per Capta: %d\n", pibpercapta > pibpercapta2);
+    printf("Super Poder: %d\n", SuperPoder > SuperPoder2);
+
+
+
+
 
 }
